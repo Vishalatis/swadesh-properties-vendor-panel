@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+
+    <title>Swadesh Properties</title>
+
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
+
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="assets/css/bootstrap-tagsinput.css" />
+
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css" />
+
+    <link rel="stylesheet" href="assets/css/jquery.timepicker.min.css" />
+
+    <link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css" />
+
+    <link rel="stylesheet" href="assets/css/dropzone.min.css" />
+
+    <link rel="stylesheet" href="assets/css/atlantis.css" />
+
+    <link rel="stylesheet" href="assets/css/select2.min.css" />
+
+    <link rel="stylesheet" href="assets/css/admin-main.css" />
+  </head>
+
+  <body data-background-color="white2">
+    <div class="request-loader">
+      <img src="assets/img/loader.gif" alt="loader" />
+    </div>
+
+    <div class="wrapper">
+      <div class="main-header">
+        <!-- Logo Header Start -->
+        <div class="logo-header" data-background-color="white">
+          <a href="dashboard.html" class="logo" target="_blank">
+            <img
+              src="assets/img/logo.png"
+              alt="logo"
+              class="navbar-brand"
+              width="120"
+            />
+          </a>
+
+          <button
+            class="navbar-toggler sidenav-toggler ml-auto"
+            type="button"
+            data-toggle="collapse"
+            data-target="collapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon">
+              <i class="fas fa-bars"></i>
+              <!-- Corrected class -->
+            </span>
+          </button>
+          <button class="topbar-toggler more">
+            <i class="fas fa-ellipsis-v"></i>
+            <!-- Corrected class -->
+          </button>
+
+          <div class="nav-toggle">
+            <button class="btn btn-toggle toggle-sidebar">
+              <i class="fas fa-bars"></i>
+              <!-- Corrected class -->
+            </button>
+          </div>
+        </div>
+        <!-- Logo Header End -->
+
+        <!-- Navbar Header Start -->
+        <nav
+          class="navbar navbar-header navbar-expand-lg"
+          data-background-color="white2"
+        >
+          <div class="container-fluid">
+            <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+              <li class="nav-item dropdown hidden-caret">
+                <a
+                  class="dropdown-toggle profile-pic"
+                  data-toggle="dropdown"
+                  href="#"
+                  aria-expanded="false"
+                >
+                  <div class="avatar-sm">
+                    <img
+                      src="assets/admin/img/vendor-photo/66693baebe4c2.png"
+                      alt="Vendor Image"
+                      class="avatar-img rounded-circle"
+                    />
+                  </div>
+                </a>
+
+                <ul class="dropdown-menu dropdown-user animated fadeIn">
+                  <div class="dropdown-user-scroll scrollbar-outer">
+                    <li>
+                      <div class="user-box">
+                        <div class="avatar-lg">
+                          <img
+                            src="assets/admin/img/vendor-photo/66693baebe4c2.png"
+                            alt="Vendor Image"
+                            class="avatar-img rounded-circle"
+                          />
+                        </div>
+
+                        <div class="u-text">
+                          <h4>oscar_eade</h4>
+                          <p class="text-muted">fomima3881@eqvox.com</p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="edit-profile.html">
+                        Edit Profile
+                      </a>
+
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="change-password.html">
+                        Change Password
+                      </a>
+
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="login.html"> Logout </a>
+                    </li>
+                  </div>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- Navbar Header End -->
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="allLimits"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title card-title" id="exampleModalLabel">
+                All Limit
+              </h3>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <ul class="list-group border">
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <span class="text-focus"> Agents Left : </span>
+
+                    <span class="badge badge-primary badge-sm"> 9 </span>
+                  </div>
+                </li>
+
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <span class="text-focus"> Properties Left : </span>
+
+                    <span class="badge badge-primary badge-sm"> 47 </span>
+                  </div>
+                </li>
+
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <span class="text-focus">
+                      Gallery Images Limit (Per Property) :
+                    </span>
+
+                    <span class="badge badge-primary badge-sm"> 99 </span>
+                  </div>
+                </li>
+
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <span class="text-focus">
+                      Additional Features Limit (Per Property) :
+                    </span>
+                    <span class="badge badge-primary badge-sm"> 99 </span>
+                  </div>
+                </li>
+
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <span class="text-focus"> Projects Left : </span>
+
+                    <span class="badge badge-primary badge-sm"> 48 </span>
+                  </div>
+                </li>
+
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <span class="text-focus">
+                      Gallery Images Limit (Per Project) :
+                    </span>
+                    <span class="badge badge-primary badge-sm"> 99 </span>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <span class="text-focus">
+                      Project Types Limit (Per Project) :
+                    </span>
+                    <span class="badge badge-primary badge-sm"> 99 </span>
+                  </div>
+                </li>
+
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <span class="text-focus">
+                      Additional Features Limit (Per Project) :
+                    </span>
+                    <span class="badge badge-primary badge-sm"> 99 </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar sidebar-style-2" data-background-color="white">
+        <div class="sidebar-wrapper scrollbar scrollbar-inner">
+          <div class="sidebar-content">
+            <div class="user">
+              <div class="avatar-sm float-left mr-2">
+                <img
+                  src="assets/admin/img/vendor-photo/66693baebe4c2.png"
+                  alt="Vendor Image"
+                  class="avatar-img rounded-circle"
+                />
+              </div>
+
+              <div class="info">
+                <a
+                  data-toggle="collapse"
+                  href="#adminProfileMenu"
+                  aria-expanded="true"
+                >
+                  <span>
+                    oscar_eade
+                    <span class="user-level">Vendor</span>
+                    <span class="caret"></span>
+                  </span>
+                </a>
+
+                <div class="clearfix"></div>
+
+                <div class="collapse in" id="adminProfileMenu">
+                  <ul class="nav">
+                    <li>
+                      <a href="edit-profile.html">
+                        <span class="link-collapse">Edit Profile</span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="change-password.html">
+                        <span class="link-collapse">Change Password</span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="login.html">
+                        <span class="link-collapse">Logout</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <ul class="nav nav-primary">
+              <div class="row mb-3">
+                <div class="col-12">
+                  <form>
+                    <div class="form-group py-0">
+                      <input
+                        name="term"
+                        type="text"
+                        class="form-control sidebar-search ltr"
+                        placeholder="Search Menu Here..."
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <li class="nav-item">
+                <a href="dashboard.html">
+                  <i class="fa-solid fa-palette"></i>
+                  <p>Dashboard</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a data-toggle="collapse" href="#propertyManagement">
+                  <i class="fa-solid fa-home"></i>
+                  <p>Property Management</p>
+                  <span class="caret"></span>
+                </a>
+
+                <div id="propertyManagement" class="collapse">
+                  <ul class="nav nav-collapse">
+                    <li>
+                      <a href="add-property-management.html">
+                        <span class="sub-item">Add Property</span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="property-management.html">
+                        <span class="sub-item">Manage Properties </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a href="property-messages.html">
+                  <i class="fa-solid fa-comment"></i>
+                  <p>Property Messages</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a data-toggle="collapse" href="#projectManagement">
+                  <i class="fa-solid fa-city"></i>
+                  <p>Project Management</p>
+                  <span class="caret"></span>
+                </a>
+
+                <div id="projectManagement" class="collapse">
+                  <ul class="nav nav-collapse">
+                    <li>
+                      <a href="project-management-create.html">
+                        <span class="sub-item">Add Project</span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="project-management.html">
+                        <span class="sub-item">Manage Projects</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a href="agent-management.html">
+                  <i class="fa-solid fa-users-cog"></i>
+                  <p>Agents</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a data-toggle="collapse" href="#support_ticket">
+                  <i class="fa-solid fa-globe"></i>
+                  <p>Support Tickets</p>
+                  <span class="caret"></span>
+                </a>
+
+                <div id="support_ticket" class="collapse">
+                  <ul class="nav nav-collapse">
+                    <li>
+                      <a href="support-tickets.html">
+                        <span class="sub-item">All Tickets</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="support-ticket-create.html">
+                        <span class="sub-item">Add a Ticket</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a href="package-list.html">
+                  <i class="fa-solid fa-lightbulb"></i>
+                  <p>Buy Plan</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="payment-log.html">
+                  <i class="fa-solid fa-list-ol"></i>
+                  <p>Payment Logs</p>
+                </a>
+              </li>
+
+              <li class="nav-item active">
+                <a href="edit-profile.html">
+                  <i class="fa-solid fa-user-edit"></i>
+                  <p>Edit Profile</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="change-password.html">
+                  <i class="fa-solid fa-key"></i>
+                  <p>Change Password</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="login.html">
+                  <i class="fa-solid fa-sign-out-alt"></i>
+                  <p>Logout</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-panel">
+        <div class="content">
+          <div class="page-inner">
+            <div class="page-header">
+              <h4 class="page-title">Edit Profile</h4>
+              <ul class="breadcrumbs">
+                <li class="nav-home">
+                  <a href="dashboard.html">
+                    <i class="fa-solid fa-home"></i>
+                  </a>
+                </li>
+                <li class="separator">
+                  <i class="fa-solid fa-angle-right"></i>
+                </li>
+                <li class="nav-item">
+                  <a href="#">Edit Profile</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="card-title">Edit Profile</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-lg-8 mx-auto">
+                        <div
+                          class="alert alert-danger pb-1 dis-none"
+                          id="carErrors"
+                        >
+                          <button
+                            type="button"
+                            class="close"
+                            data-dismiss="alert"
+                          >
+                            ×
+                          </button>
+                          <ul></ul>
+                        </div>
+                        <form id="carForm" action="" method="post">
+                          <input type="hidden" name="_token" value="" />
+                          <h2>Details</h2>
+                          <hr />
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <div class="form-group">
+                                <label for="">Photo</label>
+                                <br />
+                                <div class="thumb-preview">
+                                  <img
+                                    src="assets/admin/img/vendor-photo/66693baebe4c2.png"
+                                    alt="..."
+                                    class="uploaded-img"
+                                  />
+                                </div>
+
+                                <div class="mt-3">
+                                  <div
+                                    role="button"
+                                    class="btn btn-primary btn-sm upload-btn"
+                                  >
+                                    Choose Photo
+                                    <input
+                                      type="file"
+                                      class="img-input"
+                                      name="photo"
+                                    />
+                                  </div>
+                                  <p
+                                    id="editErr_photo"
+                                    class="mt-1 mb-0 text-danger em"
+                                  ></p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-4">
+                              <div class="form-group">
+                                <label>Username*</label>
+                                <input
+                                  type="text"
+                                  value="oscar_eade"
+                                  class="form-control"
+                                  name="username"
+                                />
+                                <p
+                                  id="editErr_username"
+                                  class="mt-1 mb-0 text-danger em"
+                                ></p>
+                              </div>
+                            </div>
+                            <div class="col-lg-4">
+                              <div class="form-group">
+                                <label>Email*</label>
+                                <input
+                                  type="text"
+                                  value="fomima3881@eqvox.com"
+                                  class="form-control"
+                                  name="email"
+                                />
+                                <p
+                                  id="editErr_email"
+                                  class="mt-1 mb-0 text-danger em"
+                                ></p>
+                              </div>
+                            </div>
+                            <div class="col-lg-4">
+                              <div class="form-group">
+                                <label>Phone</label>
+                                <input
+                                  type="tel"
+                                  value="26456852"
+                                  class="form-control"
+                                  name="phone"
+                                />
+                                <p
+                                  id="editErr_phone"
+                                  class="mt-1 mb-0 text-danger em"
+                                ></p>
+                              </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                              <div class="row">
+                                <div class="col-lg-4">
+                                  <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                      <input
+                                        type="checkbox"
+                                        checked=""
+                                        name="show_email_addresss"
+                                        class="custom-control-input"
+                                        id="show_email_addresss"
+                                      />
+                                      <label
+                                        class="custom-control-label"
+                                        for="show_email_addresss"
+                                        >Show Email Address
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-lg-4">
+                                  <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                      <input
+                                        type="checkbox"
+                                        checked=""
+                                        name="show_phone_number"
+                                        class="custom-control-input"
+                                        id="show_phone_number"
+                                      />
+                                      <label
+                                        class="custom-control-label"
+                                        for="show_phone_number"
+                                        >Show Phone Number</label
+                                      >
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-lg-4">
+                                  <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                      <input
+                                        type="checkbox"
+                                        checked=""
+                                        name="show_contact_form"
+                                        class="custom-control-input"
+                                        id="show_contact_form"
+                                      />
+                                      <label
+                                        class="custom-control-label"
+                                        for="show_contact_form"
+                                        >Show Contact Form</label
+                                      >
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                              <div id="accordion" class="mt-5">
+                                <div class="version">
+                                  <div class="version-header" id="heading20">
+                                    <h5 class="mb-0">
+                                      <button
+                                        type="button"
+                                        class="btn btn-link"
+                                        data-toggle="collapse"
+                                        data-target="#collapse20"
+                                        aria-expanded="true"
+                                        aria-controls="collapse20"
+                                      >
+                                        English Language (Default)
+                                      </button>
+                                    </h5>
+                                  </div>
+
+                                  <div
+                                    id="collapse20"
+                                    class="collapse show"
+                                    aria-labelledby="heading20"
+                                    data-parent="#accordion"
+                                  >
+                                    <div class="version-body">
+                                      <div class="row">
+                                        <div class="col-lg-8">
+                                          <div class="form-group">
+                                            <label>Name*</label>
+                                            <input
+                                              type="text"
+                                              value="Oscar Eade"
+                                              class="form-control"
+                                              name="en_name"
+                                              placeholder="Enter Name"
+                                            />
+                                            <p
+                                              id="editErr_en_name"
+                                              class="mt-1 mb-0 text-danger em"
+                                            ></p>
+                                          </div>
+                                        </div>
+
+                                        <div class="col-lg-4">
+                                          <div class="form-group">
+                                            <label>Country</label>
+                                            <input
+                                              type="text"
+                                              value="USA"
+                                              class="form-control"
+                                              name="en_country"
+                                              placeholder="Enter Country"
+                                            />
+                                            <p
+                                              id="editErr_en_country"
+                                              class="mt-1 mb-0 text-danger em"
+                                            ></p>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                          <div class="form-group">
+                                            <label>City</label>
+                                            <input
+                                              type="text"
+                                              value="San Antonio"
+                                              class="form-control"
+                                              name="en_city"
+                                              placeholder="Enter City"
+                                            />
+                                            <p
+                                              id="editErr_en_city"
+                                              class="mt-1 mb-0 text-danger em"
+                                            ></p>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                          <div class="form-group">
+                                            <label>State</label>
+                                            <input
+                                              type="text"
+                                              value="Texas"
+                                              class="form-control"
+                                              name="en_state"
+                                              placeholder="Enter State"
+                                            />
+                                            <p
+                                              id="editErr_en_state"
+                                              class="mt-1 mb-0 text-danger em"
+                                            ></p>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                          <div class="form-group">
+                                            <label>Zip Code</label>
+                                            <input
+                                              type="text"
+                                              value=""
+                                              class="form-control"
+                                              name="en_zip_code"
+                                              placeholder="Enter Zip Code"
+                                            />
+                                            <p
+                                              id="editErr_en_zip_code"
+                                              class="mt-1 mb-0 text-danger em"
+                                            ></p>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                          <div class="form-group">
+                                            <label>Address</label>
+                                            <input
+                                              type="text"
+                                              class="form-control"
+                                              placeholder="Enter Address"
+                                              name="en_address"
+                                              id=""
+                                              value="123 Alamo Plaza San Antonio, TX 78205"
+                                            />
+
+                                            <p
+                                              id="editErr_en_email"
+                                              class="mt-1 mb-0 text-danger em"
+                                            ></p>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                          <div class="form-group">
+                                            <label>Details</label>
+                                            <textarea
+                                              name="en_details"
+                                              class="form-control"
+                                              rows="5"
+                                              placeholder="Enter Details"
+                                            >
+Oscar Eade was born in Colombia and moved to the United States in 2001 at the age of 20, in pursuit of a better future. He initially took a job working at a cafeteria in a Miami hotel. Noticing construction taking off in 2002 he looked for a way into the real estate industry and found work with investors who were purchasing, remodeling, and selling single family homes in the Tampa Bay area.
+  
+  Miguel immediately fell in love with the business, and quickly learned from the investors who became mentors to him. They saw his potential and within a short time he was managing over 150 properties in Tampa Bay, Orlando, and Jacksonville, Florida while becoming a Residential Real Estate Appraiser until opening his own practice.
+  
+  Soon after became very interested in helping families achieve their home dreams and goals for what he became a Sales Associate and then a Top Producer Broker achieving the highest sales award over four consecutive years during his time at Weichert, Realtors - Best Beach. He is now ranked the #1 agent in sales for Century 21 KoRes and a member of Masters Emerald an elite group of high producing professionals for Century 21 in the country.
+  
+  Miguel’s top skills include Spanish/English fluent, quality negotiation skills MCNE (Master Certified Negotiation Expert) finding value in complex properties and hands on team ready to resolve and cater the most complex transaction or client’s need.
+  
+  In his free time Miguel enjoys spending time with his family, traveling, little league, practicing CrossFit, soccer and triathlons.</textarea
+                                            >
+                                            <p
+                                              id="editErr_en_details"
+                                              class="mt-1 mb-0 text-danger em"
+                                            ></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="version">
+                                  <div class="version-header" id="heading25">
+                                    <h5 class="mb-0">
+                                      <button
+                                        type="button"
+                                        class="btn btn-link"
+                                        data-toggle="collapse"
+                                        data-target="#collapse25"
+                                        aria-expanded="false"
+                                        aria-controls="collapse25"
+                                      >
+                                        عربي Language
+                                      </button>
+                                    </h5>
+                                  </div>
+
+                                  <div
+                                    id="collapse25"
+                                    class="collapse"
+                                    aria-labelledby="heading25"
+                                    data-parent="#accordion"
+                                  >
+                                    <div class="version-body">
+                                      <div class="row">
+                                        <div class="col-lg-8">
+                                          <div
+                                            class="form-group rtl text-right"
+                                          >
+                                            <label>Name*</label>
+                                            <input
+                                              type="text"
+                                              value="أوسكار إيدي"
+                                              class="form-control"
+                                              name="ar_name"
+                                              placeholder="Enter Name"
+                                            />
+                                            <p
+                                              id="editErr_ar_name"
+                                              class="mt-1 mb-0 text-danger em"
+                                            ></p>
+                                          </div>
+                                        </div>
+
+                                        <div class="col-lg-4">
+                                          <div
+                                            class="form-group rtl text-right"
+                                          >
+                                            <label>Country</label>
+                                            <input
+                                              type="text"
+                                              value="الولايات المتحدة الأمريكية"
+                                              class="form-control"
+                                              name="ar_country"
+                                              placeholder="Enter Country"
+                                            />
+                                            <p
+                                              id="editErr_ar_country"
+                                              class="mt-1 mb-0 text-danger em"
+                                            ></p>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                          <div
+                                            class="form-group rtl text-right"
+                                          >
+                                            <label>City</label>
+                                            <input
+                                              type="text"
+                                              value="سان أنطونيو"
+                                              class="form-control"
+                                              name="ar_city"
+                                              placeholder="Enter City"
+                                            />
+                                            <p
+                                              id="editErr_ar_city"
+                                              class="mt-1 mb-0 text-danger em"
+                                            ></p>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                          <div
+                                            class="form-group rtl text-right"
+                                          >
+                                            <label>State</label>
+                                            <input
+                                              type="text"
+                                              value="تكساس"
+                                              class="form-control"
+                                              name="ar_state"
+                                              placeholder="Enter State"
+                                            />
+                                            <p
+                                              id="editErr_ar_state"
+                                              class="mt-1 mb-0 text-danger em"
+                                            ></p>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                          <div
+                                            class="form-group rtl text-right"
+                                          >
+                                            <label>Zip Code</label>
+                                            <input
+                                              type="text"
+                                              value=""
+                                              class="form-control"
+                                              name="ar_zip_code"
+                                              placeholder="Enter Zip Code"
+                                            />
+                                            <p
+                                              id="editErr_ar_zip_code"
+                                              class="mt-1 mb-0 text-danger em"
+                                            ></p>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                          <div
+                                            class="form-group rtl text-right"
+                                          >
+                                            <label>Address</label>
+                                            <input
+                                              type="text"
+                                              class="form-control"
+                                              placeholder="Enter Address"
+                                              name="ar_address"
+                                              id=""
+                                              value="123 ألامو بلازا سان أنطونيو، تكساس 78205"
+                                            />
+
+                                            <p
+                                              id="editErr_ar_email"
+                                              class="mt-1 mb-0 text-danger em"
+                                            ></p>
+                                          </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                          <div
+                                            class="form-group rtl text-right"
+                                          >
+                                            <label>Details</label>
+                                            <textarea
+                                              name="ar_details"
+                                              class="form-control"
+                                              rows="5"
+                                              placeholder="Enter Details"
+                                            >
+ولد أوسكار إيدي في كولومبيا وانتقل إلى الولايات المتحدة في عام 2001 عن عمر 20 عامًا، سعيًا وراء مستقبل أفضل. تولى في البداية وظيفة العمل في كافتيريا في أحد فنادق ميامي. لاحظ انطلاق أعمال البناء في عام 2002، فبحث عن طريقة للدخول في صناعة العقارات ووجد عملاً مع المستثمرين الذين كانوا يشترون ويعيدون تصميم وبيع منازل الأسرة الواحدة في منطقة خليج تامبا.
+  
+  وقع ميغيل على الفور في حب هذا العمل، وسرعان ما تعلم من المستثمرين الذين أصبحوا مرشدين له. لقد رأوا إمكاناته وفي غضون وقت قصير كان يدير أكثر من 150 عقارًا في خليج تامبا وأورلاندو وجاكسونفيل بولاية فلوريدا بينما أصبح مثمنًا للعقارات السكنية حتى افتتاح عيادته الخاصة.
+  
+  وبعد فترة وجيزة أصبح مهتمًا جدًا بمساعدة العائلات على تحقيق أحلامهم وأهدافهم المنزلية حيث أصبح مساعد مبيعات ثم وسيطًا من أفضل المنتجين محققًا أعلى جائزة مبيعات على مدار أربع سنوات متتالية خلال فترة وجوده.
+  
+  تشمل مهارات ميغيل العليا التحدث باللغة الإسبانية/الإنجليزية بطلاقة، ومهارات تفاوض عالية الجودة، وخبير تفاوض معتمد رئيسي يجد القيمة في العقارات المعقدة وفريق عمل جاهز لحل وتلبية المعاملات الأكثر تعقيدًا أو احتياجات العميل.
+  
+  في أوقات فراغه، يستمتع ميغيل بقضاء الوقت مع عائلته، والسفر، وممارسة الدوري الصغير، وممارسة رياضة الكروس فيت، وكرة القدم، والسباقات الثلاثية.</textarea
+                                            >
+                                            <p
+                                              id="editErr_ar_details"
+                                              class="mt-1 mb-0 text-danger em"
+                                            ></p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card-footer">
+                    <div class="row">
+                      <div class="col-12 text-center">
+                        <button
+                          type="submit"
+                          id="PropertySubmit"
+                          class="btn btn-success"
+                        >
+                          Update
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer py-4">
+            <div class="container-fluid">
+              <div class="d-block mx-auto">
+                <p class="mb-0"></p>
+                <p>Copyright ©2024. All Rights Reserved.</p>
+                <p></p>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      "use strict";
+      const demo_mode = "active";
+      const baseUrl = "https://codecanyon8.kreativdev.com/estaty";
+    </script>
+
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
+    <script
+      type="text/javascript"
+      src="assets/js/jquery.ui.touch-punch.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/jquery.timepicker.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/jquery.scrollbar.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/bootstrap-notify.min.js"
+    ></script>
+
+    <script type="text/javascript" src="assets/js/sweet-alert.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/bootstrap-tagsinput.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/bootstrap-datepicker.min.js"
+    ></script>
+
+    <script type="text/javascript" src="assets/js/jscolor.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/fontawesome-iconpicker.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/datatables-1.10.23.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/datatables.bootstrap4.min.js"
+    ></script>
+
+    <script src="assets/js/tinymce/js/tinymce/tinymce.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/dropzone.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/atlantis.js"></script>
+
+    <script type="text/javascript" src="assets/js/webfont.min.js"></script>
+
+    <script>
+      "use strict";
+      const account_status = "1";
+      const secret_login = "0";
+    </script>
+
+    <script type="text/javascript" src="assets/js/select2.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/admin-partial.js"></script>
+    <script type="text/javascript" src="assets/js/admin-main.js"></script>
+
+    <script type="text/javascript" src="assets/js/chart.min.js"></script>
+
+    <script>
+      "use strict";
+      const monthArr = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ];
+      const totalPropertyArr = [0, 0, 0, 0, 0, "3", 0, 0, 0, 0, 0, 0];
+      const totalProjectsArr = [0, 0, 0, 0, 0, "2", 0, 0, 0, 0, 0, 0];
+    </script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/vendor-chart-init.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+
+    <title>Swadesh Properties</title>
+
+    <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png" />
+
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="assets/css/bootstrap-tagsinput.css" />
+
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css" />
+
+    <link rel="stylesheet" href="assets/css/jquery.timepicker.min.css" />
+
+    <link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css" />
+
+    <link rel="stylesheet" href="assets/css/dropzone.min.css" />
+
+    <link rel="stylesheet" href="assets/css/atlantis.css" />
+
+    <link rel="stylesheet" href="assets/css/select2.min.css" />
+
+    <link rel="stylesheet" href="assets/css/admin-main.css" />
+  </head>
+
+  <body data-background-color="white2">
+    <div class="request-loader">
+      <img src="assets/img/loader.gif" alt="loader" />
+    </div>
+
+    <div class="wrapper">
+      <div class="main-header">
+        <!-- Logo Header Start -->
+        <div class="logo-header" data-background-color="white">
+          <a href="dashboard.html" class="logo" target="_blank">
+            <img
+              src="assets/img/logo.png"
+              alt="logo"
+              class="navbar-brand"
+              width="120"
+            />
+          </a>
+
+          <button
+            class="navbar-toggler sidenav-toggler ml-auto"
+            type="button"
+            data-toggle="collapse"
+            data-target="collapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon">
+              <i class="fas fa-bars"></i>
+              <!-- Corrected class -->
+            </span>
+          </button>
+          <button class="topbar-toggler more">
+            <i class="fas fa-ellipsis-v"></i>
+            <!-- Corrected class -->
+          </button>
+
+          <div class="nav-toggle">
+            <button class="btn btn-toggle toggle-sidebar">
+              <i class="fas fa-bars"></i>
+              <!-- Corrected class -->
+            </button>
+          </div>
+        </div>
+        <!-- Logo Header End -->
+
+        <!-- Navbar Header Start -->
+        <nav
+          class="navbar navbar-header navbar-expand-lg"
+          data-background-color="white2"
+        >
+          <div class="container-fluid">
+            <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+              <li class="nav-item dropdown hidden-caret">
+                <a
+                  class="dropdown-toggle profile-pic"
+                  data-toggle="dropdown"
+                  href="#"
+                  aria-expanded="false"
+                >
+                  <div class="avatar-sm">
+                    <img
+                      src="assets/admin/img/vendor-photo/66693baebe4c2.png"
+                      alt="Vendor Image"
+                      class="avatar-img rounded-circle"
+                    />
+                  </div>
+                </a>
+
+                <ul class="dropdown-menu dropdown-user animated fadeIn">
+                  <div class="dropdown-user-scroll scrollbar-outer">
+                    <li>
+                      <div class="user-box">
+                        <div class="avatar-lg">
+                          <img
+                            src="assets/admin/img/vendor-photo/66693baebe4c2.png"
+                            alt="Vendor Image"
+                            class="avatar-img rounded-circle"
+                          />
+                        </div>
+
+                        <div class="u-text">
+                          <h4>oscar_eade</h4>
+                          <p class="text-muted">fomima3881@eqvox.com</p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="edit-profile.html">
+                        Edit Profile
+                      </a>
+
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="change-password.html">
+                        Change Password
+                      </a>
+
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="login.html"> Logout </a>
+                    </li>
+                  </div>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- Navbar Header End -->
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="allLimits"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title card-title" id="exampleModalLabel">
+                All Limit
+              </h3>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <ul class="list-group border">
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <span class="text-focus"> Agents Left : </span>
+
+                    <span class="badge badge-primary badge-sm"> 9 </span>
+                  </div>
+                </li>
+
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <span class="text-focus"> Properties Left : </span>
+
+                    <span class="badge badge-primary badge-sm"> 47 </span>
+                  </div>
+                </li>
+
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <span class="text-focus">
+                      Gallery Images Limit (Per Property) :
+                    </span>
+
+                    <span class="badge badge-primary badge-sm"> 99 </span>
+                  </div>
+                </li>
+
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <span class="text-focus">
+                      Additional Features Limit (Per Property) :
+                    </span>
+                    <span class="badge badge-primary badge-sm"> 99 </span>
+                  </div>
+                </li>
+
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <span class="text-focus"> Projects Left : </span>
+
+                    <span class="badge badge-primary badge-sm"> 48 </span>
+                  </div>
+                </li>
+
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <span class="text-focus">
+                      Gallery Images Limit (Per Project) :
+                    </span>
+                    <span class="badge badge-primary badge-sm"> 99 </span>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <span class="text-focus">
+                      Project Types Limit (Per Project) :
+                    </span>
+                    <span class="badge badge-primary badge-sm"> 99 </span>
+                  </div>
+                </li>
+
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <span class="text-focus">
+                      Additional Features Limit (Per Project) :
+                    </span>
+                    <span class="badge badge-primary badge-sm"> 99 </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar sidebar-style-2" data-background-color="white">
+        <div class="sidebar-wrapper scrollbar scrollbar-inner">
+          <div class="sidebar-content">
+            <div class="user">
+              <div class="avatar-sm float-left mr-2">
+                <img
+                  src="assets/admin/img/vendor-photo/66693baebe4c2.png"
+                  alt="Vendor Image"
+                  class="avatar-img rounded-circle"
+                />
+              </div>
+
+              <div class="info">
+                <a
+                  data-toggle="collapse"
+                  href="#adminProfileMenu"
+                  aria-expanded="true"
+                >
+                  <span>
+                    oscar_eade
+                    <span class="user-level">Vendor</span>
+                    <span class="caret"></span>
+                  </span>
+                </a>
+
+                <div class="clearfix"></div>
+
+                <div class="collapse in" id="adminProfileMenu">
+                  <ul class="nav">
+                    <li>
+                      <a href="edit-profile.html">
+                        <span class="link-collapse">Edit Profile</span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="change-password.html">
+                        <span class="link-collapse">Change Password</span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="login.html">
+                        <span class="link-collapse">Logout</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <ul class="nav nav-primary">
+              <div class="row mb-3">
+                <div class="col-12">
+                  <form>
+                    <div class="form-group py-0">
+                      <input
+                        name="term"
+                        type="text"
+                        class="form-control sidebar-search ltr"
+                        placeholder="Search Menu Here..."
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <li class="nav-item">
+                <a href="dashboard.html">
+                  <i class="fa-solid fa-palette"></i>
+                  <p>Dashboard</p>
+                </a>
+              </li>
+
+              <li class="nav-item active">
+                <a data-toggle="collapse" href="#propertyManagement">
+                  <i class="fa-solid fa-home"></i>
+                  <p>Property Management</p>
+                  <span class="caret"></span>
+                </a>
+
+                <div id="propertyManagement" class="collapse">
+                  <ul class="nav nav-collapse">
+                    <li class="active">
+                      <a href="add-property-management.html">
+                        <span class="sub-item">Add Property</span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="property-management.html">
+                        <span class="sub-item">Manage Properties </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a href="property-messages.html">
+                  <i class="fa-solid fa-comment"></i>
+                  <p>Property Messages</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a data-toggle="collapse" href="#projectManagement">
+                  <i class="fa-solid fa-city"></i>
+                  <p>Project Management</p>
+                  <span class="caret"></span>
+                </a>
+
+                <div id="projectManagement" class="collapse">
+                  <ul class="nav nav-collapse">
+                    <li>
+                      <a href="project-management-create.html">
+                        <span class="sub-item">Add Project</span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="project-management.html">
+                        <span class="sub-item">Manage Projects</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a href="agent-management.html">
+                  <i class="fa-solid fa-users-cog"></i>
+                  <p>Agents</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a data-toggle="collapse" href="#support_ticket">
+                  <i class="fa-solid fa-globe"></i>
+                  <p>Support Tickets</p>
+                  <span class="caret"></span>
+                </a>
+
+                <div id="support_ticket" class="collapse">
+                  <ul class="nav nav-collapse">
+                    <li>
+                      <a href="support-tickets.html">
+                        <span class="sub-item">All Tickets</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="support-ticket-create.html">
+                        <span class="sub-item">Add a Ticket</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="nav-item">
+                <a href="package-list.html">
+                  <i class="fa-solid fa-lightbulb"></i>
+                  <p>Buy Plan</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="payment-log.html">
+                  <i class="fa-solid fa-list-ol"></i>
+                  <p>Payment Logs</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="edit-profile.html">
+                  <i class="fa-solid fa-user-edit"></i>
+                  <p>Edit Profile</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="change-password.html">
+                  <i class="fa-solid fa-key"></i>
+                  <p>Change Password</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="login.html">
+                  <i class="fa-solid fa-sign-out-alt"></i>
+                  <p>Logout</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-panel">
+        <div class="content">
+          <div class="page-inner">
+            <div class="page-header">
+              <h4 class="page-title">Choose Property Type</h4>
+              <ul class="breadcrumbs">
+                <li class="nav-home">
+                  <a href="#">
+                    <i class="fa-solid fa-home"></i>
+                  </a>
+                </li>
+                <li class="separator">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </li>
+                <li class="nav-item">
+                  <a href="#">Property Management</a>
+                </li>
+                <li class="separator">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </li>
+                <li class="nav-item">
+                  <a href="#">Property Type</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h3>Choose Property Type</h3>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <a
+                          href="property-management-create-commercial.html"
+                          class="d-block text-decoration-none"
+                        >
+                          <div class="card card-stats card-round">
+                            <div class="card-body">
+                              <div class="row align-items-center">
+                                <div class="col-12">
+                                  <div class="col-icon mx-auto">
+                                    <div
+                                      class="icon-big text-center icon-success bubble-shadow-small"
+                                    >
+                                      <i class="fa-solid fa-building"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col col-stats ml-3 ml-sm-0">
+                                  <div class="numbers mx-auto text-center">
+                                    <h2
+                                      class="card-title mt-2 mb-4 text-uppercase"
+                                    >
+                                      Commercial
+                                    </h2>
+                                    <p class="card-category">
+                                      <strong>Total:</strong>
+                                      2 Properties
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="col-lg-6">
+                        <a
+                          href="property-management-create-residential.html"
+                          class="d-block text-decoration-none"
+                        >
+                          <div class="card card-stats card-round">
+                            <div class="card-body">
+                              <div class="row align-items-center">
+                                <div class="col-12">
+                                  <div class="col-icon mx-auto">
+                                    <div
+                                      class="icon-big text-center icon-warning bubble-shadow-small"
+                                    >
+                                      <i class="fa-solid fa-home"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col col-stats ml-3 ml-sm-0">
+                                  <div class="numbers mx-auto text-center">
+                                    <h2
+                                      class="card-title mt-2 mb-4 text-uppercase"
+                                    >
+                                      Residential
+                                    </h2>
+                                    <p class="card-category">
+                                      <strong>Total:</strong>
+                                      1 Properties
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer py-4">
+          <div class="container-fluid">
+            <div class="d-block mx-auto">
+              <p class="mb-0"></p>
+              <p>Copyright ©2024. All Rights Reserved.</p>
+              <p></p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      "use strict";
+      const demo_mode = "active";
+      const baseUrl = "https://codecanyon8.kreativdev.com/estaty";
+    </script>
+
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
+    <script
+      type="text/javascript"
+      src="assets/js/jquery.ui.touch-punch.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/jquery.timepicker.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/jquery.scrollbar.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/bootstrap-notify.min.js"
+    ></script>
+
+    <script type="text/javascript" src="assets/js/sweet-alert.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/bootstrap-tagsinput.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/bootstrap-datepicker.min.js"
+    ></script>
+
+    <script type="text/javascript" src="assets/js/jscolor.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/fontawesome-iconpicker.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/datatables-1.10.23.min.js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/datatables.bootstrap4.min.js"
+    ></script>
+
+    <script src="assets/js/tinymce/js/tinymce/tinymce.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/dropzone.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/atlantis.js"></script>
+
+    <script type="text/javascript" src="assets/js/webfont.min.js"></script>
+
+    <script>
+      "use strict";
+      const account_status = "1";
+      const secret_login = "0";
+    </script>
+
+    <script type="text/javascript" src="assets/js/select2.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/admin-partial.js"></script>
+    <script type="text/javascript" src="assets/js/admin-main.js"></script>
+
+    <script type="text/javascript" src="assets/js/chart.min.js"></script>
+
+    <script>
+      "use strict";
+      const monthArr = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ];
+      const totalPropertyArr = [0, 0, 0, 0, 0, "3", 0, 0, 0, 0, 0, 0];
+      const totalProjectsArr = [0, 0, 0, 0, 0, "2", 0, 0, 0, 0, 0, 0];
+    </script>
+
+    <script
+      type="text/javascript"
+      src="assets/js/vendor-chart-init.js"
+    ></script>
+  </body>
+</html>
